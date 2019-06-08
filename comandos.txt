@@ -1,0 +1,63 @@
+Nome de usuário:
+git config --global user.name "Fred Melo"
+
+Email de usuário:
+git config --global user.email "fredsunderland@gmail.com"
+
+Editor preferido:
+git config --global core.editor subl
+
+Verificar:
+git config user.name
+git config user.email
+git config core.editor
+git config --list
+
+Depois de criar um arquivo:
+git add arquivo.txt
+Depois de modificar tem que add novamente
+
+Comitar:
+git commit -m "Comentário"
+
+# LOGs
+git log
+git log --decorate
+git log --author="fulano"
+git shortlog
+git shortlog -sn
+git shortlog --graph
+git show b6b2359b4870ea265b55b7724a14fdca24f32019
+
+Mostrar alterações antes de commitar:
+git diff
+git diff --name-only
+
+Quando o arquivo modificado já existe:
+git commit -am "Adição de meu github"
+
+Desfazer uma edição:
+git checkout arquivo.txt
+
+Desfazer e voltar do estado depois de add porém não
+desfaz a edição do arquivo:
+git reset HEAD arquivo.txt
+
+Resetar um commit:
+git reset --soft => só volta do commit
+git reset --mixed => volta do commit e vai pro staged
+git reset --hard => volta tudo até antes da edição do arquivo
+
+Criar chave SSH:
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+Depois ir na conf da conta do github e adicionar o SSH criado no arquivo:
+~/.ssh/id_rsa.pub
+
+Adicionar pasta local a um repositorio no github:
+git remote add origin https://github.com/fredmelo07/github-course.git
+git push -u origin master
+
+Mostrar se existe repositorio remoto:
+git remote
+git remote -v
+
